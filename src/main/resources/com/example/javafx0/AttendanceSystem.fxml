@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<!--//the fx:controller attribute is used in FXML files to specify the controller class that will handle the logic for the user interface defined in that FXML file. The controller class contains methods and logic that respond to user interactions with the UI components declared in the FXML file.-->
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.javafx0.AttendanceController" spacing="10" style="-fx-background-color: #87CEEB;">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <children>
+        <Label text="Attendance System" style="-fx-font-size: 24px;"/>
+
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Label text="Student Name:"  GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Student ID:"    GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="idField"   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Date:"          GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="dateField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </children>
+        </GridPane>
+
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Button text="Mark Present" onAction="#markPresent"/>
+                <Button text="Mark Absent"  onAction="#markAbsent"/>
+<!--            In JavaFX, the # symbol is used in the onAction attribute to specify event handler methods that are defined in the controller class. When you write onAction="#loadData", JavaFX looks for a method named loadData in the controller class specified by the fx:controller attribute of the FXML file.-->
+                <Button text="Load Data"    onAction="#loadData"/>
+            </children>
+        </HBox>
+
+        <TableView fx:id="attendanceTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn text="Student Name" fx:id="nameColumn"   prefWidth="150"/>
+                <TableColumn text="Student ID"   fx:id="idColumn"     prefWidth="100"/>
+                <TableColumn text="Date"         fx:id="dateColumn"   prefWidth="100"/>
+                <TableColumn text="Status"       fx:id="statusColumn" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </children>
+</VBox>
