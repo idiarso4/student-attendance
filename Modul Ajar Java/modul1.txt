@@ -1,0 +1,138 @@
+### Bahan Ajar: **Pengenalan Spring dan Spring Boot**  
+*(Session 1 - Pelatihan Backend Development dengan Java Spring Boot dan Firebase)*  
+
+---
+
+#### **Deskripsi Pelatihan**  
+Pelatihan ini dirancang untuk membekali peserta dengan keterampilan yang diperlukan untuk membangun aplikasi backend modern menggunakan **Java Spring Boot** dan **Firebase**. Peserta akan mengembangkan RESTful API yang kuat, aman, dan scalable, serta fungsionalitas sisi server untuk aplikasi web atau mobile.
+
+---
+
+### **Tujuan Pelatihan**  
+Setelah menyelesaikan sesi ini, peserta diharapkan dapat:  
+1. Memahami dasar-dasar **Java Spring Boot**, termasuk arsitektur, **dependency injection**, dan pola **MVC** sebagai fondasi pengembangan backend.  
+2. Menginisialisasi dan mengonfigurasi proyek **Spring Boot**, memastikan lingkungan pengembangan yang tepat.  
+3. Membuat RESTful API sederhana dan menangani permintaan HTTP menggunakan anotasi **Spring MVC**.  
+
+---
+
+### **Materi Pelatihan**  
+
+#### **1. Pengenalan Framework Spring Boot**  
+- **Apa itu Spring Boot?**  
+  Spring Boot adalah framework yang powerful yang dibangun di atas **Spring Framework**.  
+  - Menyederhanakan pembuatan aplikasi Spring.  
+  - Menyediakan fitur seperti **auto-configuration**, nilai default yang opinionated, dan server terintegrasi (**embedded servers**).  
+
+- **Keunggulan Spring Boot:**  
+  - **Auto-configuration**: Mengonfigurasi aplikasi secara otomatis berdasarkan dependensi.  
+  - **Starter POMs**: Mempermudah manajemen dependensi dengan konfigurasi pre-defined.  
+  - **Embedded Servers**: Menjalankan aplikasi web tanpa perlu server eksternal (contoh: Tomcat, Jetty).  
+  - **Spring MVC**: Fleksibel dan powerful untuk pengembangan aplikasi web.  
+  - **Spring Data JPA**: Mempermudah akses data dengan JPA.  
+  - **Spring Security**: Menyediakan fitur keamanan yang tangguh.  
+
+---
+
+#### **2. Persiapan Lingkungan Pengembangan**  
+Untuk memulai pengembangan dengan Spring Boot, pastikan Anda memiliki:  
+- **Java Development Kit (JDK)**: Versi minimal JDK 8.  
+- **IDE**: Pilih IDE favorit Anda, seperti IntelliJ IDEA, Eclipse, atau Visual Studio Code.  
+- **Build Tool**: Gunakan **Maven** atau **Gradle** untuk proyek Spring Boot.  
+
+**Rekomendasi untuk Visual Studio Code:**  
+Pasang **Spring Boot Extension Pack**, yang mencakup:  
+1. Spring Boot Tools  
+2. Spring Initializr  
+3. Spring Boot Dashboard  
+
+---
+
+#### **3. Struktur Proyek Spring Boot Dasar**  
+-Proyek Spring Boot biasanya memiliki struktur berikut:  
+-1. **Controller**: Berisi class untuk menangani permintaan dari klien HTTP.  
+-2. **Model**: Berisi class yang mewakili model data atau entitas data.  
+-3. **Service**: Berisi logika bisnis aplikasi, seperti operasi CRUD.  
+-4. **Repository**: Berisi interface untuk mengakses lapisan data.  
+-5. **Application**: File utama yang dijalankan oleh Spring Boot untuk memulai aplikasi.  
++Proyek Spring Boot biasanya memiliki struktur berikut:
++
++Contoh struktur folder:
++src/main/java/com/example/demo/
++├── DemoApplication.java           # File utama aplikasi
++├── controller                     # Direktori controller
++│   └── UserController.java       # Menangani HTTP klien
++├── model                         # Direktori model
++│   └── User.java                # Class model/entitas data
++├── service                       # Direktori service
++│   └── UserService.java         # Logika bisnis & CRUD Operation
++└── repository                    # Direktori repository
++    └── UserRepository.java      # Interface untuk akses data layer
++
++Penjelasan komponen:
++1. **Controller**: Berisikan class untuk menangani HTTP klien
++2. **Model**: Berisikan class yang mewakili model data atau entitas data
++3. **Service**: Berisikan logika bisnis dari aplikasi seperti CRUD Operation
++4. **Repository**: Berisikan interface untuk akses data layer
++5. **Application**: Main aplikasi yang akan dijalankan oleh Java Spring Boot
+---
+
+#### **4. Anotasi Spring MVC**  
+Anotasi Spring MVC membantu dalam komunikasi yang lebih jelas selama pengembangan aplikasi. Beberapa anotasi penting:  
+1. `@Controller`: Menandai class sebagai controller.  
+2. `@RequestMapping`: Memetakan permintaan HTTP ke metode handler.  
+3. `@PathVariable`: Mengambil nilai dari URI.  
+4. `@RequestParam`: Mengambil parameter dari query string.  
+5. `@RequestBody` dan `@ResponseBody`: Mengelola body permintaan dan respons.  
+6. `@RequestHeader` dan `@ResponseHeader`: Mengelola header permintaan dan respons.  
+
+---
+
+#### **5. Membuat RESTful API Sederhana**  
+Langkah-langkah membuat RESTful API:  
+1. **Model**: Buat class untuk merepresentasikan data.  
+2. **Repository**: Buat interface untuk mengakses data layer.  
+3. **Service**: Implementasikan logika bisnis.  
+4. **Controller**: Tangani permintaan HTTP dan kembalikan respons.  
+  
+Contoh:  
+```java  
+@RestController  
+@RequestMapping("/api/users")  
+public class UserController {  
+  @GetMapping("/{id}")  
+  public ResponseEntity<User> getUserById(@PathVariable Long id) {  
+    // Logika untuk mendapatkan user berdasarkan ID  
+    return ResponseEntity.ok(new User(id, "John Doe"));  
+  }  
+}  
+```  
+
+---
+
+#### **6. Menjalankan dan Menguji API**  
+- Jalankan aplikasi Spring Boot menggunakan perintah:  
+  ```bash  
+  mvn spring-boot:run  
+  ```  
+- Uji API menggunakan tools seperti **Postman** atau **cURL**.  
+  Contoh uji GET request:  
+  ```bash  
+  curl http://localhost:8080/api/users/1  
+  ```  
+
+---
+
+### **Referensi**  
+- [Spring Framework](https://spring.io/projects/spring-framework)  
+- [Why Spring](https://spring.io/why-spring)  
+- [Annotated Controllers Documentation](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller.html)  
+
+---
+
+### **Penutup**  
+Terima kasih telah mengikuti sesi pertama pelatihan ini hingga akhir. Semoga materi ini bermanfaat untuk membangun fondasi kuat dalam pengembangan backend menggunakan **Spring Boot**. Sampai jumpa di sesi berikutnya!  
+
+---  
+
+**Selamat Belajar!** 🚀

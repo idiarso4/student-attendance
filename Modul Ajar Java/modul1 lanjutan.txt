@@ -1,0 +1,49 @@
+Untuk menjalankan aplikasi Spring Boot, kita perlu memastikan beberapa hal terlebih dahulu:
+
+Pastikan Anda memiliki proyek Spring Boot yang sudah dibuat
+Pastikan JDK sudah terinstal
+Pastikan Maven atau Gradle sudah terinstal (tergantung build tool yang digunakan)
+Untuk membuat proyek baru, Anda bisa:
+
+Kunjungi Spring Initializr
+Pilih:
+Project: Maven
+Language: Java
+Spring Boot version: (versi terbaru yang stabil)
+Group: com.example
+Artifact: demo
+Dependencies: Spring Web, Spring Data JPA (jika diperlukan)
+Klik "Generate" untuk mengunduh proyek
+Setelah Anda memiliki proyek, Anda bisa:
+
+Extract file zip yang diunduh
+Buka terminal/command prompt
+Navigasi ke direktori proyek
+Jalankan perintah:
+
+----
+"mvn spring-boot:run"
+
+===============================
+
+Untuk menginstal dan menggunakan ekstensi di editor kode seperti Visual Studio Code, Anda dapat mengikuti langkah-langkah berikut:
+
+Menginstal Ekstensi di Visual Studio Code
+Buka Visual Studio Code:
+Jalankan aplikasi Visual Studio Code di komputer Anda.
+Buka Panel Ekstensi:
+Klik pada ikon ekstensi di sidebar kiri (ikon kotak dengan empat kotak kecil di dalamnya) atau tekan Ctrl + Shift + X.
+Cari Ekstensi:
+Di kotak pencarian, ketik nama ekstensi yang ingin Anda instal. Misalnya, untuk Spring Boot, Anda bisa mencari "Spring Boot Extension Pack".
+Instal Ekstensi:
+Temukan ekstensi yang relevan dalam daftar hasil pencarian.
+Klik tombol Install di sebelah ekstensi untuk menginstalnya.
+Menyusun Proyek:
+Setelah menginstal ekstensi, Anda bisa mulai menggunakan fitur-fitur yang ditawarkan, seperti Spring Initializr, Spring Boot Dashboard, dan lainnya.
+Menggunakan Ekstensi
+Buat Proyek Baru:
+Setelah menginstal ekstensi, Anda dapat menggunakan Spring Initializr untuk membuat proyek baru langsung dari Visual Studio Code.
+Menjalankan Aplikasi:
+Anda dapat menjalankan aplikasi Spring Boot dari terminal yang disediakan oleh Visual Studio Code dengan perintah mvn spring-boot:run.
+Mengelola Proyek:
+Gunakan Spring Boot Dashboard untuk mengelola dan menjalankan aplikasi Anda dengan lebih mudah.

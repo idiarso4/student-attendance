@@ -1,74 +1,74 @@
-# Student Attendance and Teacher Feedback System
+# Sistem Kehadiran Siswa dan Umpan Balik Guru
 
-Welcome to the Student Attendance and Teacher Feedback System! This application is developed using Java, JavaFX, and JDBC, and utilizes MySQL for the database. The system allows for efficient management of student attendance and collection of teacher feedback.
+Selamat datang di Sistem Kehadiran Siswa dan Umpan Balik Guru! Aplikasi ini dikembangkan menggunakan Java, JavaFX, dan JDBC, serta menggunakan MySQL untuk database. Sistem ini memungkinkan pengelolaan kehadiran siswa dan pengumpulan umpan balik guru secara efisien.
 
-## Features
+## Fitur
 
-1. **Student Attendance Management**:
-   - Mark attendance for students.
-   - View attendance records.
-   - Generate attendance reports.
+1. **Manajemen Kehadiran Siswa**:
+   - Menandai kehadiran siswa.
+   - Melihat catatan kehadiran.
+   - Menghasilkan laporan kehadiran.
 
-2. **Teacher Feedback System**:
-   - Submit feedback for students.
-   - View feedback history.
-   - Generate feedback reports.
+2. **Sistem Umpan Balik Guru**:
+   - Mengirimkan umpan balik untuk siswa.
+   - Melihat riwayat umpan balik.
+   - Menghasilkan laporan umpan balik.
 
-## Prerequisites
+## Prasyarat
 
-Before you begin, ensure you have the following installed:
+Sebelum memulai, pastikan Anda telah menginstal:
 
-- Java Development Kit (JDK) 8 or higher
+- Java Development Kit (JDK) 8 atau lebih tinggi
 - MySQL Server
 - MySQL Connector/J (JDBC Driver)
-- An IDE like IntelliJ IDEA, Eclipse, or NetBeans (optional but recommended)
+- IDE seperti IntelliJ IDEA, Eclipse, atau NetBeans (opsional tapi direkomendasikan)
 
-## Getting Started
+## Memulai
 
-### Setting Up the Database
+### Menyiapkan Database
 
-1. **Install MySQL**: Download and install MySQL from the official website.
-2. **Create Database and Tables**:
-   - Open MySQL Workbench or any MySQL client.
-   - Create a new database and tables for students, attendance, and feedback.
+1. **Instal MySQL**: Unduh dan instal MySQL dari situs web resmi.
+2. **Buat Database dan Tabel**:
+   - Buka MySQL Workbench atau klien MySQL lainnya.
+   - Buat database baru dan tabel untuk siswa, kehadiran, dan umpan balik.
 
-### Configuring the Application
+### Mengkonfigurasi Aplikasi
 
-1. **Clone the Repository**:
+1. **Klon Repositori**:
    ```bash
-   git clone https://github.com/yourusername/student-attendance-feedback.git
-   cd student-attendance-feedback
-   ```
+   git clone https://github.com/idiarso4/student-attendance.git
+   cd student-attendance
+   ``
 
-2. **Configure Database Connection**:
-   - Update the database connection settings in the `dbconfig.properties` file with your MySQL credentials and database details.
+2. **Konfigurasi Koneksi Database**:
+   - Perbarui pengaturan koneksi database di file `dbconfig.properties` dengan kredensial MySQL dan detail database Anda.
 
-### Running the Application
+### Menjalankan Aplikasi
 
-1. **Build and Run**:
-   - Open the project in your IDE.
-   - Build and run the application.
+1. **Build dan Jalankan**:
+   - Buka proyek di IDE Anda.
+   - Build dan jalankan aplikasi.
 
-2. **Using the Application**:
-   - Navigate through the UI to manage student attendance and submit teacher feedback.
+2. **Menggunakan Aplikasi**:
+   - Navigasi melalui UI untuk mengelola kehadiran siswa dan mengirimkan umpan balik guru.
 
-## Contributing
+## Berkontribusi
 
-Contributions are welcome! Please follow these steps:
+Kontribusi sangat diterima! Silakan ikuti langkah-langkah berikut:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add new feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Open a pull request.
+1. Fork repositori.
+2. Buat branch baru (`git checkout -b feature-branch`).
+3. Lakukan perubahan Anda.
+4. Commit perubahan Anda (`git commit -m 'Menambah fitur baru'`).
+5. Push ke branch (`git push origin feature-branch`).
+6. Buka pull request.
 
-## License
+## Lisensi
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail.
 
-## Contact
+## Kontak
 
-If you have any questions or suggestions, feel free to reach out to the project maintainers.
+Jika Anda memiliki pertanyaan atau saran, jangan ragu untuk menghubungi pengelola proyek.
 
-Thank you for using the Student Attendance and Teacher Feedback System!
+Terima kasih telah menggunakan Sistem Kehadiran Siswa dan Umpan Balik Guru!
