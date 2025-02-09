@@ -47,3 +47,55 @@ Menjalankan Aplikasi:
 Anda dapat menjalankan aplikasi Spring Boot dari terminal yang disediakan oleh Visual Studio Code dengan perintah mvn spring-boot:run.
 Mengelola Proyek:
 Gunakan Spring Boot Dashboard untuk mengelola dan menjalankan aplikasi Anda dengan lebih mudah.
+
+
+LANGKAH IMPLEMENTASI SISTEM ABSENSI DENGAN POSTGRESQL
+
+1. Setup Database PostgreSQL:
+   - Install PostgreSQL dan pgAdmin
+   - Buat database baru bernama 'attendance'
+   - Buat tabel dengan query:
+     CREATE TABLE student_attendance (
+         id SERIAL PRIMARY KEY,
+         student_name VARCHAR(100) NOT NULL,
+         student_id VARCHAR(50) NOT NULL,
+         date DATE NOT NULL,
+         status VARCHAR(20) NOT NULL,
+         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+     );
+
+2. Konfigurasi Koneksi Database:
+   - Update DatabaseUtil.java dengan kredensial PostgreSQL:
+     private static final String URL = "jdbc:postgresql://localhost:5432/attendance";
+     private static final String USER = "postgres";
+     private static final String PASSWORD = "root";
+
+3. Implementasi Model:
+   - Buat class AttendanceRecord.java untuk menyimpan data absensi
+   - Class ini memiliki properti: studentName, studentId, date, status
+
+4. Implementasi Controller:
+   - Update AttendanceController.java dengan fungsi CRUD
+   - Tambahkan fungsi markPresent() dan markAbsent()
+   - Implementasi loadData() untuk menampilkan data di TableView
+
+5. Testing:
+   - Jalankan aplikasi dengan 'mvn javafx:run'
+   - Test fungsi absensi dengan mengisi:
+     * Student Name
+     * Student ID
+     * Date
+   - Klik 'Mark Present' atau 'Mark Absent'
+   - Verifikasi data tersimpan di database
+
+6. Push ke GitHub:
+   - Inisialisasi git repository: git init
+   - Add semua file: git add .
+   - Commit perubahan: git commit -m "Update: Implement attendance system with PostgreSQL integration"
+   - Push ke GitHub dengan token:
+     git push https://[token]@github.com/[username]/[repo].git main
+
+Catatan:
+- Pastikan PostgreSQL berjalan di port 5432
+- Password database disesuaikan dengan instalasi lokal
+- Backup database secara berkala
