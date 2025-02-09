@@ -72,3 +72,34 @@ Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) unt
 Jika Anda memiliki pertanyaan atau saran, jangan ragu untuk menghubungi pengelola proyek.
 
 Terima kasih telah menggunakan Sistem Kehadiran Siswa dan Umpan Balik Guru!
+
+ket 1
+=========
+
+Struktur pom.xml
+Group ID dan Artifact ID:
+groupId: com.example
+artifactId: javafx0
+Ini mendefinisikan identitas unik untuk proyek Anda.
+Dependencies:
+Anda telah menambahkan beberapa dependensi penting, termasuk:
+mysql-connector-java untuk koneksi ke database MySQL.
+javafx-controls, javafx-fxml, dll., untuk pengembangan aplikasi JavaFX.
+junit untuk pengujian unit.
+Build Plugins:
+Anda menggunakan maven-compiler-plugin untuk mengatur versi Java yang digunakan.
+javafx-maven-plugin untuk menjalankan aplikasi JavaFX.
+Langkah Selanjutnya
+Periksa Versi Plugin:
+Pastikan semua versi plugin dan dependensi sesuai dengan yang Anda butuhkan.
+Jalankan Proyek:
+Setelah memastikan semua konfigurasi benar, Anda bisa menjalankan proyek dengan perintah:
+bash
+CopyInsert in Terminal
+mvn clean javafx:run
+Debugging:
+Jika Anda mengalami masalah saat menjalankan proyek, Anda bisa menjalankan Maven dengan opsi debug:
+bash
+CopyInsert in Terminal
+mvn clean javafx:run -X
+Jika Anda ingin menambahkan atau
